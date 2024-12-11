@@ -40,7 +40,7 @@ export const signUp = (logicData) => {
   console.log("inside signup middleware")
   return (dispatch) => {
     dispatch(signUpRequest());
-    fetch('http://localhost:8080/auth/signup', {
+    fetch('https://locate-places-backend.onrender.com/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export const signIn = (loginData) => {
   console.log("inside signup middleware")
   return (dispatch) => {
     dispatch(signInRequest());
-    fetch('http://localhost:8080/auth/signin', {
+    fetch('https://locate-places-backend.onrender.com/auth/signin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ export const fetchData = (inputData) => {
   return (dispatch, getState) => {
     dispatch(fetchDataRequest());
 
-    fetch('http://localhost:8080/locate/best-places-for-me', {
+    fetch('https://locate-places-backend.onrender.com/locate/best-places-for-me', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
