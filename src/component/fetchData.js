@@ -53,10 +53,10 @@ export const signUp = (logicData) => {
           dispatch(signUpFailure(response));
         }
         dispatch(signUpSuccess(response));
-        return response.json();
+        return response;
       })
       .catch((error) => {
-        dispatch(signUpFailure(error.message)); // Dispatch failure action
+        dispatch(signUpFailure(error)); // Dispatch failure action
       });
   };
 };
