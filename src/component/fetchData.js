@@ -109,7 +109,9 @@ export const signIn = (loginData) => {
         if (!response.ok) {
           dispatch(signInFailure(response));
         }
-        dispatch(signInSuccess(response));
+        else {
+          dispatch(signInSuccess(response));
+        }
       })
       .catch((error) => {
         dispatch(signInFailure(error.message)); // Dispatch failure action
