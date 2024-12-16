@@ -5,7 +5,8 @@ import {
   SIGN_UP_FAILURE,
   SIGN_UP_REQUEST,
   SIGN_UP_SUCCESS,
-  RESET_ERROR_AUTH
+  RESET_ERROR_AUTH,
+  RESET_AUTH_STATE
 } from './fetchData';
 const initialState = {
   loading: false,
@@ -55,6 +56,12 @@ const AuthReducer = (state = initialState, action) => {
         loading: false,
         user: null,
         error: action.payload,
+      };
+    case RESET_AUTH_STATE:
+      return {
+        loading: false,
+        user: null,
+        error: false,
       };
     default:
       return state;

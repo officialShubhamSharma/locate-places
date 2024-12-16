@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { signUp } from './fetchData';  // Assuming you have action creators to handle signup
+import { signUp, resetAuthState } from './fetchData';  // Assuming you have action creators to handle signup
 
 function Copyright() {
   return (
@@ -48,9 +48,10 @@ export default function SignUp() {
       navigate('/error')
     }
     if(user){
+      dispatch(resetAuthState())
       navigate('/signin')
     }
-  },[error,user,navigate])
+  },[error,user,navigate,dispatch])
 
   return (
     <div className="background-color">

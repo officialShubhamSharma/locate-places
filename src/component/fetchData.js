@@ -10,8 +10,11 @@ export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
 export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE';
 export const RESET_ERROR_AUTH = 'RESET_ERROR_AUTH';
 export const RESET_ERROR='RESET_ERROR';
+export const RESET_AUTH_STATE='RESET_AUTH_STATE';
 
-
+export const resetAuthState=()=>({
+  type: RESET_AUTH_STATE,
+});
 
 const resetErrorRequest=()=>({
   type: RESET_ERROR,
