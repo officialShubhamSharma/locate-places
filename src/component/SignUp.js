@@ -33,6 +33,7 @@ export default function SignUp() {
   const navigate=useNavigate()
   const user = useSelector((state) => state.authState.user)
   const error = useSelector((state) => state.authState.error)
+  const loadingApiCall = useSelector((state) => state.authState.loading)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -124,9 +125,16 @@ export default function SignUp() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{
+                  mt: 3,
+                  mb: 2,
+                  animation: loadingApiCall
+                    ? 'blinking 1.5s infinite ease-in-out'
+                    : 'none',
+                  backgroundColor: loadingApiCall ? 'secondary.main' : 'primary.main',
+                }}
               >
-                Sign Up
+                {loadingApiCall ? 'Loading...' : 'Sign Up'}
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
