@@ -29,21 +29,12 @@ const ErrorPage = () => {
     >
       <Typography
         sx={{
-          fontSize: '4rem',
-          fontWeight: 700,
-          marginBottom: 2,
+          fontSize: '2rem',
+          fontWeight: 300,
+          marginBottom: 1,
         }}
       >
-        404
-      </Typography>
-      <Typography
-        sx={{
-          fontSize: '1.25rem',
-          marginBottom: 4,
-          fontWeight: 400,
-        }}
-      >
-        Oops! Something went wrong or the page you're looking for doesn't exist.
+        Oops! Something's broken.
       </Typography>
       <Button
         variant="contained"
