@@ -82,7 +82,7 @@ export default function SignIn() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign In
+              Login
             </Typography>
             <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
               <Grid container spacing={2}>
@@ -115,9 +115,16 @@ export default function SignIn() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{
+                  mt: 3,
+                  mb: 2,
+                  animation: loadingApiCall
+                    ? 'blinking 1.5s infinite ease-in-out'
+                    : 'none',
+                  backgroundColor: loadingApiCall ? 'secondary.main' : 'primary.main',
+                }}
               >
-                Sign In
+                {loadingApiCall ? 'Loading...' : 'Login'}
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>

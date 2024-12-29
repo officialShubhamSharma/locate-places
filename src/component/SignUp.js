@@ -50,7 +50,7 @@ export default function SignUp() {
     }
     if(user){
       dispatch(resetAuthState())
-      navigate('/signin')
+      navigate('/login')
     }
   },[error,user,navigate,dispatch])
 
@@ -141,7 +141,7 @@ export default function SignUp() {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link to="/signin">
+                  <Link to="/login">
                     Already have an account? Sign in
                   </Link>
                 </Grid>

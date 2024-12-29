@@ -97,7 +97,7 @@ export const signIn = (loginData) => {
   console.log("inside signup middleware")
   return (dispatch) => {
     dispatch(signInRequest());
-    fetch('https://locate-places-backend.onrender.com/auth/signin', {
+    fetch('https://locate-places-backend.onrender.com/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

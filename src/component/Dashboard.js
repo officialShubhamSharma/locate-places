@@ -69,7 +69,6 @@ const Dashboard = () => {
                     id="location"
                     label="Where are you?"
                     name="currentCity"
-                    autoComplete="location"
                     sx={{
                       marginBottom: '20px',
                     }}
@@ -80,7 +79,6 @@ const Dashboard = () => {
                     id="radius"
                     label="Find Places Within (in km)"
                     name="radiusInKm"
-                    autoComplete="radius"
                     sx={{
                       marginBottom: '20px',
                     }}
@@ -91,7 +89,6 @@ const Dashboard = () => {
                     id="numberOfDays"
                     label="Number Of Days"
                     name="noOfDaysTrip"
-                    autoComplete="numberOfDays"
                     sx={{
                       marginBottom: '20px',
                     }}
@@ -102,7 +99,6 @@ const Dashboard = () => {
                     id="numberOfMembers"
                     label="Number Of Members"
                     name="noOfMembers"
-                    autoComplete="numberOfMembers"
                     sx={{
                       marginBottom: '30px',
                     }}
