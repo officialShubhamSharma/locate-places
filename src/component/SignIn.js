@@ -34,6 +34,7 @@ export default function SignIn() {
   const navigate = useNavigate();
   const user = useSelector((state) => state.authState.user);
   const error = useSelector((state) => state.authState.error);
+  const loadingApiCall = useSelector((state) => state.authState.loading)
 
   const handleSubmit = (event) => {
     event.preventDefault();
